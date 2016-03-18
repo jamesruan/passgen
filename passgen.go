@@ -58,5 +58,5 @@ func genPass(phrase []string) string {
 		io.WriteString(acc, phrase[i])
 	}
 	sum := acc.Sum(nil)
-	return base64.StdEncoding.EncodeToString(sum)
+	return base64.RawStdEncoding.EncodeToString(sum)
 }
